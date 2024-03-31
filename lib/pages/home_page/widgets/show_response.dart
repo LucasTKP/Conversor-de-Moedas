@@ -53,7 +53,6 @@ class _ShowResponseState extends State<ShowResponse> {
                 ],
               );
             } else {
-              // Se o valor for nulo, você pode retornar um widget vazio ou qualquer outro widget de sua escolha
               return const SizedBox.shrink();
             }
           },

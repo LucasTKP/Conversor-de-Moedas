@@ -19,7 +19,7 @@ class _SelectedQuantityState extends State<SelectedQuantity> {
         SizedBox(
           width: 300,
           child: TextFormField(
-              inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*$'))], // Reger que aceita numeros e ponto,
+              inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*$'))], // Regex que aceita numeros e ponto,
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'Por favor, insira um número.';

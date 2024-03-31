@@ -103,7 +103,7 @@ class CurrencyController {
     return false;
   }
 
-  //Salvando a moeda base escolhida no cache
+  //Salvando as moedas no cache
   saveInCache(String value, TypeDropDown typeDropDown) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     if (TypeDropDown.base == typeDropDown) {
@@ -113,7 +113,7 @@ class CurrencyController {
     }
   }
 
-  //Puxando a ultima moeda base escolhida
+  //Puxando a ultima moeda escolhida
   Future<String?> getInCache(TypeDropDown typeDropDown) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? currencyCache;
