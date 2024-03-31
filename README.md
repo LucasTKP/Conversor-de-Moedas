@@ -1,10 +1,7 @@
 <h1 align="center">Cambio</h1>
 <div>
-Repositório para um projeto de uma vaga de estágio para mensurar o conhecimento. Seu objetivo é converter entre um valor em diferentes moedas.
+Repositório para um projeto de uma vaga de estágio para mensurar o conhecimento. Seu objetivo é converter um valor em diferentes moedas.
 </div>  
-  
- 
-  #
   
 
   #
@@ -23,7 +20,7 @@ Repositório para um projeto de uma vaga de estágio para mensurar o conheciment
 
 #
     
-<div align="center">  
+<div align="left">  
   <strong> 💼 Tecnologias utilizadas: </strong>
 </div>   
 
