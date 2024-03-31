@@ -73,6 +73,8 @@ Repositório para um projeto de uma vaga de estágio para mensurar o meu conheci
    <strong>08. Criei um loading:</strong> Visando melhorar a UX, criei um loading e deixei ele ativo, sempre que faço uma requisição na api.
 </div>
 
+<br />
+
 <div align="center">
   
 
