@@ -1,22 +1,13 @@
-import 'package:currency_converter/controllers/coins_controller.dart';
+import 'package:currency_converter/controllers/currency_controller.dart';
 import 'package:flutter/material.dart';
 
 class ButtonHandleForm extends StatefulWidget {
-  const ButtonHandleForm(
-      {super.key,
-      required this.quantity,
-      required this.controller,
-      required this.formKey,
-      required this.currentCoinSelected,
-      required this.currentConvertedCurrency,
-      required this.convertedValue});
+  const ButtonHandleForm({
+    super.key,
+    required this.controller,
+  });
 
-  final TextEditingController quantity;
-  final CoinsController controller;
-  final GlobalKey<FormState> formKey;
-  final String? currentCoinSelected;
-  final String? currentConvertedCurrency;
-  final ValueNotifier<String?> convertedValue;
+  final CurrencyController controller;
 
   @override
   State<ButtonHandleForm> createState() => _ButtonHandleFormState();
@@ -32,21 +23,18 @@ class _ButtonHandleFormState extends State<ButtonHandleForm> {
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () async {
-              final response = await widget.controller.handleConverter(
-                formKey: widget.formKey,
-                quantity: widget.quantity.text,
-                currentCoinSelected: widget.currentCoinSelected,
-                currentConvertedCurrency: widget.currentConvertedCurrency,
-              );
-          
-              if (response != null) {
-                if (response.data.containsKey('rates')) {
-                  // Acessa o valor a moeda escolhida para fazer o cambio
-                  widget.convertedValue.value = response.data['rates']
-                          [widget.currentConvertedCurrency]
-                      .toString();
-                }
+              onError(String error) {
+                final snackBar = SnackBar(
+                  content: Text(error),
+                );
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
               }
+
+              if (FocusScope.of(context).focusedChild != null) {
+                FocusScope.of(context).focusedChild!.unfocus();
+              }
+
+              widget.controller.handleConverter(onError);
             },
             style: ButtonStyle(
               backgroundColor:
