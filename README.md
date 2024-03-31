@@ -18,7 +18,6 @@ Repositório para um projeto de uma vaga de estágio para mensurar o conheciment
 </div>
 
 
-#
     
 <div align="left">  
   <strong> 💼 Tecnologias utilizadas: </strong>
