@@ -74,7 +74,11 @@ Repositório para um projeto de uma vaga de estágio para mensurar o meu conheci
 </div>
 
 <div align="center">
-  https://github.com/LucasTKP/Conversor-de-Moedas/assets/101598532/f5232228-673e-461b-9e00-734516d6e8c8
+  
+
+https://github.com/LucasTKP/Conversor-de-Moedas/assets/101598532/80d49ffe-1b4a-420c-9249-f6836eb1480a
+
+
 </div>
 
 
